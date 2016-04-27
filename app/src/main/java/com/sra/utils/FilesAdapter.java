@@ -10,22 +10,27 @@ import android.widget.TextView;
 
 import com.sra.login.R;
 
-public class FilesAdapter  extends BaseAdapter{
+public class FilesAdapter extends BaseAdapter {
 	ArrayList<FileInfo> mList;
 	LayoutInflater mInflater;
-	public FilesAdapter(ArrayList<FileInfo> list,LayoutInflater inflater){
-	mList=list;
-	mInflater=inflater;
+	private boolean isTop10;
+
+	public FilesAdapter(ArrayList<FileInfo> list, LayoutInflater inflater,
+			boolean top10) {
+		mList = list;
+		mInflater = inflater;
+		isTop10 = top10;
 	}
 
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		if(mList.size()<=10){
+		if (isTop10 && mList.size() > 10) {
+			return 10;
+
+		} else {
 			return mList.size();
 
-		}else{
-			return 10;
 		}
 	}
 
@@ -44,16 +49,14 @@ public class FilesAdapter  extends BaseAdapter{
 	@Override
 	public View getView(int arg0, View arg1, ViewGroup arg2) {
 		// TODO Auto-generated method stub
-		
-		
-		View v=mInflater.inflate(R.layout.layout_listview_external_row, null);
-		TextView mtv=(TextView)v.findViewById(R.id.id_tv_ext);
-		mtv.setText("Name:"+mList.get(arg0).getName()+"\n Size :"+mList.get(arg0).getFileLength()+" KB");
-		
-		
+
+		View v = mInflater.inflate(R.layout.layout_listview_external_row, null);
+		TextView mtv = (TextView) v.findViewById(R.id.id_tv_ext);
+		mtv.setText("Name:" + mList.get(arg0).getName() + "\n Size :"
+				+ mList.get(arg0).getFileLength() + " KB");
+		v.setContentDescription(mList.get(arg0).getPath());
+
 		return v;
 	}
-	
-	
 
 }

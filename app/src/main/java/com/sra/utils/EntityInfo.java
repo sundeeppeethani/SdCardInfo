@@ -2,7 +2,13 @@ package com.sra.utils;
 
 public class EntityInfo {
 	
-	
+	private String extension;
+	public String getExtension() {
+		return extension;
+	}
+	public void setExtension(String extension) {
+		this.extension = extension;
+	}
 	private String name;
 	public String getName() {
 		return name;

@@ -4,10 +4,44 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <ListView
+   
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/id_btn_allfiles"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="All Files" />
+
+            <Button
+                android:id="@+id/id_btn_top10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Top 10" />
+
+            <Button
+                android:id="@+id/id_btn_recent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="most formated" />
+        </LinearLayout>
+
+    <TextView
+        android:id="@+id/id_tv_msg"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" 
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp" />
+
+    <ListView
         android:id="@+id/id_lv_files"
-        />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
