@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    
+    <Button
+        android:id="@+id/id_btn_notification"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show Notification"
+        android:textColor="@android:color/holo_blue_bright" />
+    
+    
+    
+    
+    <Button
+        android:id="@+id/id_btn_notification_clear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="clear Notification"
+        android:textColor="@android:color/holo_blue_bright" />
+    
+    
+    
+    <Button
+        android:id="@+id/id_btn_call"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="call"
+        android:textColor="@android:color/holo_blue_bright" />
+    
+    
+     
+    <Button
+        android:id="@+id/id_btn_sms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="send sms"
+        android:textColor="@android:color/holo_blue_bright" />
+
+</LinearLayout>

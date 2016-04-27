@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <Button 
+        
+        android:id="@+id/id_btn_getdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="start service"
+        />
+    
+    <Button 
+        
+        android:id="@+id/id_btn_stop_Service"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="stop service"
+        />
+    
+    
+    
+    <TextView 
+        
+        android:id="@+id/id_tv_getdata"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Load Data"
+        />
+    
+    <ListView 
+        
+        android:id="@+id/id_lv_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    
+    <ProgressBar 
+        
+        android:id="@+id/id_pb_loading"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:background="#000000"
+        />
+    
+
+</LinearLayout>
